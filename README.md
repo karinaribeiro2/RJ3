@@ -36,13 +36,15 @@ O projeto contém as seguintes classes:
 ## ▶️ Como Executar
 
 1. 📥 Instale o [Node.js](https://nodejs.org/) se ainda não tiver.
-2. 💾 Salve o código do projeto em um arquivo `script.js`.
-3. 🔍 No terminal, navegue até a pasta onde o arquivo está localizado.
-4. ▶️ Execute o seguinte comando:
+2. 💾 Navegue até a pasta do projeto:
+   ```sh
+   cd Rei_do_Cadastro
+   ```
+3. ▶️ Execute o seguinte comando:
    ```sh
    node script.js
    ```
-5. 📜 O programa imprimirá a descrição da empresa e seus clientes no console.
+4. 📜 O programa imprimirá a descrição da empresa e seus clientes no console.
 
 ## 🎭 Exemplo de Saída
 
@@ -57,9 +59,5 @@ ddd: 11 numero: 88888888
 ...
 ```
 
-## 👨‍💻 Autor
-Desenvolvido para prática de orientação a objetos em JavaScript.
-
 ## 📜 Licença
-Este projeto está licenciado sob a MIT License.
-
+Este projeto foi desenvolvido para fins educacionais e pode ser utilizado livremente.
