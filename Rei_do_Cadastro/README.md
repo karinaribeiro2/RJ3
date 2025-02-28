@@ -1,75 +1,65 @@
-# 📦 Módulo ReiDoCadastro
+# 👑 Cadastro Supremo: O Império dos Registros Empresariais 📜
 
-Bem-vindo ao **ReiDoCadastro**, um módulo JavaScript desenvolvido em ES6 para gerenciamento de cadastros de empresas e clientes! 🎉
+## 📝 Descrição
+Este projeto implementa um sistema de cadastro de clientes e empresas utilizando JavaScript. Ele permite a criação de objetos representando empresas, clientes, telefones e endereços, garantindo a privacidade de atributos sensíveis como CPF e CNPJ.
 
 ## 🚀 Funcionalidades
+- 🏢 Criar objetos dos tipos:
+  - **Empresa** (com razão social, nome fantasia, CNPJ, endereço, clientes e telefones)
+  - **Cliente** (com nome, CPF, endereço e telefones)
+  - **📞 Telefone** (com DDD e número)
+  - **🏠 Endereço** (com estado, cidade, rua e número)
+- 🤝 Adicionar clientes a uma empresa
+- 📲 Associar telefones a clientes e empresas
+- 📄 Exibir uma descrição detalhada da empresa e seus clientes
 
-- Cadastro de **Clientes** com nome, CPF, endereço e telefones 📇
-- Cadastro de **Empresas** com razão social, nome fantasia, CNPJ, endereço e clientes 🏢
-- Cadastro de **Endereços** e **Telefones** associados aos clientes e empresas 📍📞
-- Métodos para recuperar informações formatadas em **caixa alta** e **caixa baixa** 🔤
-- Método para exibir os detalhes da empresa e seus clientes de forma organizada 📜
+## 🏗️ Estrutura do Código
 
-## 🛠 Estrutura do Projeto
+O projeto contém as seguintes classes:
+
+- **🧑‍💼 Cliente**
+  - Possui um atributo privado `#cpf`.
+  - Armazena um conjunto de telefones.
+  - Possui métodos `getCpf()`, `getNomeUpperCase()`, `getNomeLowerCase()` e `addTelefone()`.
+
+- **📞 Telefone**
+  - Possui atributos `ddd` e `numero`.
+
+- **🏠 Endereço**
+  - Possui atributos `estado`, `cidade`, `rua` e `numero`.
+
+- **🏢 Empresa**
+  - Possui um atributo privado `#cnpj`.
+  - Armazena um conjunto de clientes e telefones.
+  - Possui métodos `getCnpj()`, `getRazaoSocialUpperCase()`, `getRazaoSocialLowerCase()`, `getNomeFantasiaUpperCase()`, `getNomeFantasiaLowerCase()`, `addCliente()`, `addTelefone()` e `gerarDescricao()`.
+
+## ▶️ Como Executar
+
+1. 📥 Instale o [Node.js](https://nodejs.org/) se ainda não tiver.
+2. 💾 Salve o código do projeto em um arquivo `script.js`.
+3. 🔍 No terminal, navegue até a pasta onde o arquivo está localizado.
+4. ▶️ Execute o seguinte comando:
+   ```sh
+   node script.js
+   ```
+5. 📜 O programa imprimirá a descrição da empresa e seus clientes no console.
+
+## 🎭 Exemplo de Saída
 
 ```
-📂 models/
-   ├── ReiDoCadastro.js  # Definição das classes Cliente, Empresa, Endereço e Telefone
-   ├── Telefone.js       # Classe Telefone
-   ├── Endereco.js       # Classe Endereco
-   ├── Empresa.js        # Classe Empresa
-   ├── Cliente.js        # Classe Cliente
-📂 tests/
-   ├── test.js           # Arquivo de testes
-📜 README.md             # Documentação do projeto
+Razão Social: ABC LTDA
+Nome fantasia: Mercado Online
+--------------------------------------------------
+Nome: João
+Estado: SP cidade: São José dos Campos rua: Av Andrêmeda numero: 412
+ddd: 11 numero: 99999999
+ddd: 11 numero: 88888888
+...
 ```
 
-## 📜 Exemplo de Uso
-
-```javascript
-import { Cliente } from "./models/ReiDoCadastro.js";
-import { Empresa } from "./models/ReiDoCadastro.js";
-import { Telefone } from "./models/ReiDoCadastro.js";
-import { Endereco } from "./models/ReiDoCadastro.js";
-
-// Criando um endereço
-const enderecoEmpresa = new Endereco("SP", "São Paulo", "Av. Paulista", 123);
-const empresa = new Empresa("ABC LTDA", "Mercado Online", "12345678000199", enderecoEmpresa);
-
-// Criando clientes
-const enderecoCliente1 = new Endereco("RJ", "Rio de Janeiro", "Rua Copacabana", 456);
-const cliente1 = new Cliente("Carlos", "123.456.789-00", enderecoCliente1);
-cliente1.telefones.add(new Telefone(21, "777777777"));
-cliente1.telefones.add(new Telefone(21, "999999999"));
-
-empresa.clientes.add(cliente1);
-
-console.log(empresa.detalhe());
-```
-
-## 🔧 Como Executar
-
-1. Clone este repositório:
-   ```sh
-   git clone https://github.com/seu-usuario/ReiDoCadastro.git
-   ```
-2. Navegue até a pasta do projeto:
-   ```sh
-   cd ReiDoCadastro
-   ```
-3. Execute os testes com Node.js:
-   ```sh
-   node tests/test.js
-   ```
-
-## 💾 Histórico de Commits
-
-- 🎉 Inicialização do repositório
-- 🚀 Implementação das classes principais
-- 🔥 Adição dos testes
-- 📖 Atualização da documentação
+## 👨‍💻 Autor
+Desenvolvido para prática de orientação a objetos em JavaScript.
 
 ## 📜 Licença
-
-Este projeto está licenciado sob a **MIT License**. Sinta-se livre para usar e modificar! 😃
+Este projeto está licenciado sob a MIT License.
 
