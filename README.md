@@ -53,7 +53,7 @@ Razão Social: ABC LTDA
 Nome fantasia: Mercado Online
 --------------------------------------------------
 Nome: João
-Estado: SP cidade: São José dos Campos rua: Av Andrêmeda numero: 412
+Estado: SP cidade: São José dos Campos rua: Av Andrômeda numero: 412
 ddd: 11 numero: 99999999
 ddd: 11 numero: 88888888
 ...

@@ -94,10 +94,10 @@ class Empresa {
     }
 }
 
-const enderecoEmpresa = new Endereco('SP', 'São José dos Campos', 'Av Andrêmeda', 987);
-const enderecoCliente1 = new Endereco('SP', 'São José dos Campos', 'Av Andrêmeda', 412);
+const enderecoEmpresa = new Endereco('SP', 'São José dos Campos', 'Av Andrômeda', 987);
+const enderecoCliente1 = new Endereco('SP', 'São José dos Campos', 'Av Andrômeda', 412);
 const enderecoCliente2 = new Endereco('SP', 'São José dos Campos', 'Av São João', 789);
-const enderecoCliente3 = new Endereco('SP', 'São José dos Campos', 'Av Andrêmeda', 452);
+const enderecoCliente3 = new Endereco('SP', 'São José dos Campos', 'Av Andrômeda', 452);
 
 const telefone1 = new Telefone(11, 99999999);
 const telefone2 = new Telefone(11, 88888888);
